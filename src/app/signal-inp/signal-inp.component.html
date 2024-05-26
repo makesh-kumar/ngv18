@@ -1,0 +1,5 @@
+
+<p>Signal inp</p>
+<button (click)="addNum()">Add Num</button>
+<p>Parent : {{nums() | json}}</p>
+<signal-child [nums]="nums() " (val)="getVal($event)"/> 

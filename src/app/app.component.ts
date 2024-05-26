@@ -3,12 +3,14 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, signal }
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { SignalDemo } from './signal-demo/signal-demo.component';
+import { SignalInp } from './signal-inp/signal-inp.component';
+import { ModelBinding } from './mode-binding/model-binding.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo],
+  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo, SignalInp, ModelBinding],
   templateUrl: './app.component.html',
 })
 
