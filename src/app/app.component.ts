@@ -2,14 +2,16 @@ import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
+import { SignalDemo } from './signal-demo/signal-demo.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule],
+  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
+
 export class AppComponent {
 
   cdRef = inject(ChangeDetectorRef);
@@ -35,6 +37,7 @@ export class AppComponent {
       age: [2]
     })
 
+    
     this.userForm.events.subscribe(console.log)
   }
 

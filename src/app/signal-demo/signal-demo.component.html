@@ -1,0 +1,16 @@
+<p>Signal Demo</p>
+<div>
+    <p>Length : {{length()}}</p>
+    <p>Breadth : {{breadth()}}</p>
+    <p>Area : {{area()}}</p>
+
+    <button (click)="updateLengthByOne()">Update Length by 1</button>
+    <button (click)="updateBreadthByOne()">Update Breadth by 1</button>
+
+    <button (click)="setLengthToTen()">Set Length to 10</button>
+    <button (click)="setBreadthToTen()">Set Breadth to 10</button>
+
+    <p>Random Num : {{randomNums() | json}}</p>
+    <button (click)="pushRandomVal()">Push values</button>
+
+</div>
