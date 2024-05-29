@@ -5,16 +5,21 @@ import { RouterOutlet } from '@angular/router';
 import { SignalDemo } from './signal-demo/signal-demo.component';
 import { SignalInp } from './signal-inp/signal-inp.component';
 import { ModelBinding } from './mode-binding/model-binding.component';
+import { ViewQueries } from './view-queries/view-queries.component';
+import { RxInterop } from './rx-interop/rx-interop.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo, SignalInp, ModelBinding],
+  imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo, SignalInp, ModelBinding,ViewQueries,
+    RxInterop],
   templateUrl: './app.component.html',
 })
 
 export class AppComponent {
+
+  num = 77;
 
   cdRef = inject(ChangeDetectorRef);
   fb = inject(FormBuilder);
