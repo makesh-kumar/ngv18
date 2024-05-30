@@ -1,0 +1,15 @@
+<p>Control flows</p>
+<p>Flag : {{flag}}</p>
+<button (click)="toggleFlag()">Toggle flag</button>
+
+@if (flag) {
+    <p>If block</p>
+} @else {
+    <p>Else block</p>
+}
+
+@for( val of arr; track $index; let i=$odd;) {
+    <p>{{i}} - {{val}}</p>
+} @empty {
+    <p>Array is empty</p>
+}

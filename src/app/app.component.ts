@@ -7,13 +7,15 @@ import { SignalInp } from './signal-inp/signal-inp.component';
 import { ModelBinding } from './mode-binding/model-binding.component';
 import { ViewQueries } from './view-queries/view-queries.component';
 import { RxInterop } from './rx-interop/rx-interop.component';
+import { ControlFlows } from './control-flows/control-flows.component';
+import { DeferViews } from './defer-views/defer-views.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet,JsonPipe,ReactiveFormsModule, SignalDemo, SignalInp, ModelBinding,ViewQueries,
-    RxInterop],
+    RxInterop,ControlFlows,DeferViews],
   templateUrl: './app.component.html',
 })
 
